@@ -1,3 +1,5 @@
+import 'package:counter_test/pages/forgot_password_page.dart';
+import 'package:counter_test/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -174,6 +176,13 @@ class Remember extends StatefulWidget {
 class _RememberState extends State<Remember> {
   bool ischecked = true;
 
+  void forgotPassword() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const ForgotPassword()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -191,7 +200,7 @@ class _RememberState extends State<Remember> {
         ),
         const Spacer(),
         TextButton(
-            onPressed: () => {},
+            onPressed: forgotPassword,
             child: const Text(
               '¿Olvido su contraseña?',
               style: TextStyle(fontSize: 12),

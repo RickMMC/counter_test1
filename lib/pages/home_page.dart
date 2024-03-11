@@ -15,13 +15,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(""),
+        title: const Text("Ricardo Magaña Calva"),
       ),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(''),
+          const Text('Hola desde pages'),
           Text("Contador: $cont"),
         ],
       )),
@@ -32,26 +32,26 @@ class _HomePageState extends State<HomePage> {
 
   Widget _crearBotones() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           FloatingActionButton(
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
             onPressed: () => _sumar(),
           ),
           const SizedBox(
             width: 5,
           ),
           FloatingActionButton(
-            child: Icon(Icons.remove),
+            child: const Icon(Icons.remove),
             onPressed: () => _restart(),
           ),
           const SizedBox(
             width: 5,
           ),
           FloatingActionButton(
-            child: Icon(Icons.exposure_zero),
+            child: const Icon(Icons.exposure_zero),
             onPressed: () => _reset(),
           ),
         ],
